@@ -11,13 +11,10 @@ PerfectIn.Domain is TYPO3.Flow package for supporting domain events.
  	$event = new \PerfectIn\App\Domain\Event\SomethingHappenedEvent($something);
  }
 ```
-
- - add the annotation @PerfectIn\Domain\Annotations\Event to your domain event class
- - subscribe to event by @PerfectIn\Domain\Annotations\Subscribe("classnameOfDomainEvent")
  
 ## Domain event
 
-- needs @PerfectIn\Domain\Annotations\Event
+- needs annotiation @PerfectIn\Domain\Annotations\Event
 - annotation can be provided with
 -- publish=true => to autmatically publish event after construction (default=true)
 -- persist=true => to autmatically persist (TODO!) event after construction (default=false)
@@ -43,6 +40,8 @@ class SomethingHappenedEvent  {
 
 ## Example Subscribe to domain event
 
+
+ - needs annotiation @PerfectIn\Domain\Annotations\Subscribe("classnameOfDomainEvent")
 
 ```
 
