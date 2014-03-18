@@ -13,6 +13,11 @@ class EventRepository {
 	
 	const ENTITY_CLASSNAME = NULL;
 	
+	/**
+	 * @TODO implement event storage
+	 * 
+	 * @param EventInterface $event
+	 */
 	public function add(EventInterface $event) {
 
 	}

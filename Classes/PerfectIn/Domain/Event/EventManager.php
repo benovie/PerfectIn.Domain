@@ -5,10 +5,17 @@ namespace PerfectIn\Domain\Event;
 use TYPO3\Flow\Annotations as Flow;
 
 /**
+ * event manager
+ * 
  * @Flow\Scope("singleton")
  */
 class EventManager implements EventManagerInterface {
 	
+	/**
+	 * subscriptions
+	 * 
+	 * @var array
+	 */
 	protected $subscriptions = array();
 
 	/**
@@ -29,8 +36,7 @@ class EventManager implements EventManagerInterface {
 	 * @return void
 	 */
 	public function initializeObject() {
-		$subscribeClasses = $this->reflectionService->getClassesContainingMethodsAnnotatedWith('PerfectIn\Domain\Annotations\Subscribe');
-		
+		$subscribeClasses = $this->reflectionService->getClassesContainingMethodsAnnotatedWith('PerfectIn\Domain\Annotations\Subscribe');	
 		foreach($subscribeClasses AS $subscribeClass) {
 			foreach(get_class_methods($subscribeClass) AS $method) {
 				$annotation = $this->reflectionService->getMethodAnnotation($subscribeClass, $method, 'PerfectIn\Domain\Annotations\Subscribe');

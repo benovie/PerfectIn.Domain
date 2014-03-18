@@ -7,7 +7,7 @@ use TYPO3\Flow\Reflection\ObjectAccess;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Adds the aspect of persistence magic to relevant objects
+ * adds domainevent logic to annotated domain events
  *
  * @Flow\Scope("singleton")
  * @Flow\Aspect
