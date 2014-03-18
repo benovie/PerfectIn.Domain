@@ -18,9 +18,8 @@ s}
 ## Domain event
 
 - needs annotiation @PerfectIn\Domain\Annotations\Event
-- annotation can be provided with
-    publish=true => to autmatically publish event after construction (default=true)
-    persist=true => to autmatically persist (TODO!) event after construction (default=false)
+- annotation option: publish => to automatically publish event after construction (default=true)
+- annotation option: persist => to automatically persist (TODO!) event after construction (default=false)
 
  
 ```
