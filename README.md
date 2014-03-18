@@ -5,7 +5,7 @@ Package to support domain events
  
  Example Domain event:
  
- ```php
+```
 
 namespace PerfectIn\App\Domain\Event;
 
@@ -42,7 +42,7 @@ class SomethingHappenedEvent  {
 Example Subscribe to domain event
 
 
-```php
+```
 
 
 /**
