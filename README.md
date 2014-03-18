@@ -7,9 +7,12 @@ PerfectIn.Domain is TYPO3.Flow package for supporting domain events.
 ## Trigger domain event
 
 ```
- function doSomething($something) {
- 	$event = new \PerfectIn\App\Domain\Event\SomethingHappenedEvent($something);
- }
+
+use PerfectIn\App\Domain\Event as Event;
+
+function doSomething($something) {
+ 	$event = new Event\SomethingHappenedEvent($something);
+s}
 ```
  
 ## Domain event
@@ -46,12 +49,13 @@ class SomethingHappenedEvent  {
 ```
 
 use PerfectIn\Domain\Annotations as Domain;
+use PerfectIn\App\Domain\Event as Event;
 
 /**
  * @Domain\Subscribe("PerfectIn\App\Domain\Event\SomethingHappenedEvent")
- * @param \PerfectIn\App\Domain\Event\SomethingHappenedEvent $somethingHappenedEvent
+ * @param Event\SomethingHappenedEvent $somethingHappenedEvent
  */
-public function logSomethingHappened(\PerfectIn\App\Domain\Event\SomethingHappenedEvent $somethingHappenedEvent) {
+public function logSomethingHappened(Event\SomethingHappenedEvent $somethingHappenedEvent) {
 
 }
 
