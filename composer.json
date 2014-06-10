@@ -1,1 +1,14 @@
-{"name":"perfectin\/domain","type":"typo3-flow-package","description":null,"version":null,"require":{"typo3\/flow":"*"},"autoload":{"psr-0":{"PerfectIn\\Domain":"Classes"}}}
+{
+    "name": "perfectin/domain",
+    "type": "typo3-flow-framework",
+    "description": "Webservices",
+    "license": "LGPL-3.0+",
+    "require": {
+        "typo3/flow": "2.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "PerfectIn\\Domain": "Classes"
+        }
+    }
+}

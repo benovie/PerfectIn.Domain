@@ -7,7 +7,7 @@ use TYPO3\Flow\Reflection\ObjectAccess;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * adds domainevent logic to annotated domain events
+ * Adds the aspect of persistence magic to relevant objects
  *
  * @Flow\Scope("singleton")
  * @Flow\Aspect
@@ -23,7 +23,7 @@ class EventAspect {
 	
 	/**
 	 * @Flow\Inject
-	 * @var PerfectIn\Domain\Event\EventRepository
+	 * @var PerfectIn\Domain\Repository\EventRepository
 	 */
 	protected $eventRepository;
 	
@@ -72,7 +72,7 @@ class EventAspect {
 			$this->eventManager->publish($joinPoint->getProxy());
 		}
 		if ($eventAnnotation->persist) {
-			$this->eventRepository->add($joinPoint->getProxy());
+			$this->eventRepository->add(new \PerfectIn\Domain\Model\Event($joinPoint->getProxy()));
 		}
 	}
 }
