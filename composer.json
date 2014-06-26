@@ -4,7 +4,7 @@
     "description": "TYPO3 Flow package to use for domain events",
     "license": "LGPL-3.0+",
     "require": {
-        "typo3/flow": "2.0.*"
+        "typo3/flow": "2.*"
     },
     "autoload": {
         "psr-0": {
